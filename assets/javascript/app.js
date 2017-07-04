@@ -13,11 +13,44 @@ $(document).ready(function () {
   var database = firebase.database();
 
   // Declare user inputs as variables
-  var trainName = $("#train-name").val().trim();
-  var destination = $("#destination").val().trim();
-  var firstTime = $("#first-time").val().trim();
-  var frequency = $("#frequency").val().trim();
-
   
 
+  var submit = $("#submit")
+  // On click function that takes the data the user puts into the display fields
+  submit.on("click", function() {
+    var trainName = $("#train-name").val().trim();
+    var destination = $("#destination").val().trim();
+    var firstTime = $("#first-time").val().trim();
+    var frequency = $("#frequency").val().trim();
+
+    // Calculate the Next Arrival and Minutes Away
+    
+
+    console.log(trainName)
+    console.log(destination)
+    console.log(firstTime)
+    console.log(frequency)
+    
+    // Store the values in the database
+    database.ref().set({
+      trainName: trainName,
+      destination: destination,
+      firstTime: firstTime,
+      frequency: frequency
+    })
+
+    
+    
+    
+
+
+    // Clear the input fields
+    $("#train-name").val('')
+    $("#destination").val('')
+    $("#first-time").val('')
+    $("#frequency").val('')
+
+  })
+  
+  
 })
