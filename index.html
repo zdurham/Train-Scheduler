@@ -11,11 +11,13 @@
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
-  <body>
+  <body class="gold">
 
     <!-- Header -->
     <header>
-      <h1 class="center-align">Train Scheduler</h1>
+      <div class="card light-blue z-depth-3" id="header">
+        <h1 class="center-align white-text">Train Scheduler</h1>
+      </div>
     </header>
     <!-- End of Header -->
 
@@ -23,68 +25,58 @@
       <!-- Row 1 -->
       <div class="row">
         <div class="col s12">
-          <table>
-            <thead>
-              <tr>
-                <th>Train Name</th>
-                <th>Destination</th>
-                <th>Frequency</th>
-                <th>Next Arrival</th>
-                <th>Minutes Away</th>
-              </tr>
-            </thead>
+          <div class="card z-depth-3" id="content">
+            <table class="light-blue-text">
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th>Frequency</th>
+                  <th>Next Arrival</th>
+                  <th>Minutes Away</th>
+                </tr>
+              </thead>
 
-            <tbody>
-              <!-- Form input will append to here -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <!-- Closing Row 1 -->
+              <tbody>
+                <!-- Form input will append to here -->
+              </tbody>
+            </table>
 
-      <!-- Row 2 -->
-      <div class="row">
-        <div class="col s12">
-          <!-- Beginning of Form here -->
-          <form id="add-train">
-          <div class="row"> <!-- Sub row 1 -->
-            <div class="input-field col s12">
-              <input placeholder="Train Name" id="train-name" type="text" class="validate">
-              <label for="train-name" class="active">Train Name</label>
-            </div>
-          </div> <!-- Closing sub row 1 -->
-          
-          <div class="row"> <!-- Sub row 2 -->
-            <div class="input-field col s12">
-              <input placeholder="Destination" id="destination" type="text" class="validate">
-              <label for="destination" class="active">Destination</label>
-            </div>
-          </div> <!-- Closing sub row 2 -->
+            <!-- Beginning of Form here -->
+            <form id="add-train">
+            <div class="row"> <!-- Sub row 1 -->
+              <div class="input-field col s6">
+                <input placeholder="The Blue Train" id="train-name" type="text" class="validate">
+                <label for="train-name" class="active">Train Name</label>
+              </div>
+              
+              <div class="input-field col s6">
+                <input placeholder="Cape Town" id="destination" type="text" class="validate">
+                <label for="destination" class="active">Destination</label>
+              </div>
+            </div> <!-- Closing sub row 1 -->
 
-          <div class="row"> <!-- Sub Row 3 -->
-            <div class="input-field col s3">
-              <input placeholder="HH" id="hours" type="number" class="validate">
-              <label for="hours" class="active">First Train Time</label>
-            </div>
-            <div class="input-field col s3">
-              <input placeholder="mm" id="minutes" type="number" class="validate">
-            </div>
+            <div class="row"> <!-- Sub Row 2 -->
+              <div class="input-field col s3">
+                <input placeholder="HH" id="hours" type="number" class="validate">
+                <label for="hours" class="active">First Train Time</label>
+              </div>
+              <div class="input-field col s3">
+                <input placeholder="mm" id="minutes" type="number" class="validate">
+              </div>          
             
-          </div> <!-- Closing Sub Row 3 -->
+              <div class="input-field col s6">
+                <input placeholder="in minutes" id="frequency" type="number" class="validate">
+                <label for="frequency" class="active">Frequency</label>
+              </div>
+            </div> <!-- Closing Sub Row 2 -->
 
-
-          <div class="row"> <!-- Sub Row 4 -->
-            <div class="input-field col s12">
-              <input placeholder="Frequency (in minutes)" id="frequency" type="number" class="validate">
-              <label for="frequency" class="active">Frequency</label>
-            </div>
-          </div> <!-- Closing Sub Row 4 -->
-
-          <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit</button>
-          </form>
+            <button class="btn light-blue waves-effect waves-light center-align" type="submit" id="submit" name="action">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
-      <!--Closing Row 2 -->
+      <!--Closing Row 1 -->
     </div>
     <!-- Closing Container -->
 

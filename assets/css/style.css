@@ -1,0 +1,13 @@
+body {
+  /*background-image: url("../images/train-background.jpg");*/
+  background-color: #5C6BC0;
+}
+
+#header {
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+}
+
+#content {
+  padding: 1rem;
+}
