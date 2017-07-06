@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>Train Scheduler</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Linking Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <!-- Linking Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   <body>
 
@@ -57,10 +62,14 @@
           </div> <!-- Closing sub row 2 -->
 
           <div class="row"> <!-- Sub Row 3 -->
-            <div class="input-field col s12">
-              <input placeholder="HH:mm" id="first-time" type="text" class="validate">
-              <label for="first-time" class="active">First Train Time</label>
+            <div class="input-field col s3">
+              <input placeholder="HH" id="hours" type="number" class="validate">
+              <label for="hours" class="active">First Train Time</label>
             </div>
+            <div class="input-field col s3">
+              <input placeholder="mm" id="minutes" type="number" class="validate">
+            </div>
+            
           </div> <!-- Closing Sub Row 3 -->
 
 
