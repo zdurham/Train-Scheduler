@@ -9,6 +9,9 @@ header {
   color: white;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
 
 #train-schedule {
   padding: 1rem;
@@ -22,3 +25,30 @@ header {
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
+
+.input-field label {
+     color: #03a9f4;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #03a9f4;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #03a9f4;
+     box-shadow: 0 1px 0 0 #03a9f4;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #03a9f4;
+     box-shadow: 0 1px 0 0 #03a9f4;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #03a9f4;
+     box-shadow: 0 1px 0 0 #03a9f4;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #03a9f4;
+   }
