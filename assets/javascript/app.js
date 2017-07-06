@@ -30,27 +30,18 @@ function buildRow(object, key) {
   createTd(object.destination, row)
   createTd(object.frequency, row)
 
-  // Time stuff goes here:
-  var start = moment(object.firstTime, "HH:mm")// This is the starting time of the train -> the user's input
-  console.log(start)
+  // Time stuff falls below here
+  var now = moment();
+  var frequency = object.frequency
+  var firstTrain = object.firstTime
 
-  var now = moment(); // This is the current time
-  console.log(now)
-
-  var diff = now.diff(start, "minutes") // This is the difference between now and the start time
-  console.log(diff)
-
-  if (diff > 0) {
-    var increment;
-    do {
-      increment = start.add(object.frequency, "m")
-    } while (now.diff(increment, "minutes") > 0)
-    start = increment;
-    diff = now.diff(start, "minutes")
-  }
-
-  createTd(start.format("HH:mm"), row)
-  createTd(start.fromNow(), row)
+  var timeDiff = now.diff(moment(firstTrain, "hh:mm A"), 'm');
+  var timeRemain = timeDiff % frequency;
+  var minutesAway = frequency - timeRemain;
+  var nextTrain = moment().add(minutesAway, "m").format("hh:mm A");
+  
+  createTd(nextTrain, row)
+  createTd(minutesAway, row)
 
   //Add delete button
   createTd('<i class="material-icons small del">delete</i>', row)

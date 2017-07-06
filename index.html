@@ -11,13 +11,11 @@
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
-  <body class="gold">
+  <body class="blue-grey lighten-3">
 
     <!-- Header -->
-    <header>
-      <div class="card light-blue z-depth-3" id="header">
+    <header class="light-blue z-depth-1">
         <h1 class="center-align white-text">Train Scheduler</h1>
-      </div>
     </header>
     <!-- End of Header -->
 
@@ -25,54 +23,67 @@
       <!-- Row 1 -->
       <div class="row">
         <div class="col s12">
-          <div class="card z-depth-3" id="content">
-            <table class="light-blue-text">
-              <thead>
-                <tr>
-                  <th>Train Name</th>
-                  <th>Destination</th>
-                  <th>Frequency</th>
-                  <th>Next Arrival</th>
-                  <th>Minutes Away</th>
-                </tr>
-              </thead>
+          <div class="card z-depth-1">
+            <div class="card-header light-blue">
+              <span class="card-title">Train Schedule</span>
+            </div>
+            <div id="train-schedule">
+              <table class="light-blue-text">
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
 
-              <tbody>
-                <!-- Form input will append to here -->
-              </tbody>
-            </table>
+                <tbody>
+                  <!-- Form input will append to here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
 
+          <div class="card z-depth-1">
             <!-- Beginning of Form here -->
+            <div class="card-header light-blue">
+              <span class="card-title">Add a Train</span>
+            </div>
             <form id="add-train">
-            <div class="row"> <!-- Sub row 1 -->
-              <div class="input-field col s6">
-                <input placeholder="The Blue Train" id="train-name" type="text" class="validate">
-                <label for="train-name" class="active">Train Name</label>
-              </div>
+              <div class="row"> <!-- Sub row 1 -->
+                <div class="input-field col s6">
+                  <input placeholder="The Blue Train" id="train-name" type="text" class="validate">
+                  <label for="train-name" class="active">Train Name</label>
+                </div>
+                
+                <div class="input-field col s6">
+                  <input placeholder="Cape Town" id="destination" type="text" class="validate">
+                  <label for="destination" class="active">Destination</label>
+                </div>
+              </div> <!-- Closing sub row 1 -->
+
+              <div class="row"> <!-- Sub Row 2 -->
+                <div class="input-field col s3">
+                  <input placeholder="HH" id="hours" type="number" class="validate">
+                  <label for="hours" class="active">First Train Time</label>
+                </div>
+                <div class="input-field col s3">
+                  <input placeholder="mm" id="minutes" type="number" class="validate">
+                </div>          
               
-              <div class="input-field col s6">
-                <input placeholder="Cape Town" id="destination" type="text" class="validate">
-                <label for="destination" class="active">Destination</label>
-              </div>
-            </div> <!-- Closing sub row 1 -->
+                <div class="input-field col s6">
+                  <input placeholder="in minutes" id="frequency" type="number" class="validate">
+                  <label for="frequency" class="active">Frequency</label>
+                </div>
+              </div> <!-- Closing Sub Row 2 -->
 
-            <div class="row"> <!-- Sub Row 2 -->
-              <div class="input-field col s3">
-                <input placeholder="HH" id="hours" type="number" class="validate">
-                <label for="hours" class="active">First Train Time</label>
-              </div>
-              <div class="input-field col s3">
-                <input placeholder="mm" id="minutes" type="number" class="validate">
-              </div>          
-            
-              <div class="input-field col s6">
-                <input placeholder="in minutes" id="frequency" type="number" class="validate">
-                <label for="frequency" class="active">Frequency</label>
-              </div>
-            </div> <!-- Closing Sub Row 2 -->
-
-            <button class="btn light-blue waves-effect waves-light center-align" type="submit" id="submit" name="action">Submit</button>
+              <button class="btn light-blue waves-effect waves-light" type="submit" id="submit" name="action">Submit</button>   
             </form>
+            <div class="card-action">
+                <p class="blue-grey-text text-lighten-4 vertical-align float-right">Copyright 2017 Zach Durham</p>
+              </div>
           </div>
         </div>
       </div>
